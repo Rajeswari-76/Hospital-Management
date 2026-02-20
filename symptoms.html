@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Diseases & Symptoms - CarePlus Hospital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9fafc;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #0096c7;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    .container {
+      flex: 1;
+      padding: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 1rem;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background: #00b4d8;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+    .btn-container {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #023e8a;
+    }
+    footer {
+      background: #03045e;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>Common Diseases & Symptoms</header>
+
+  <div class="container">
+    <p>Here are some common diseases and their symptoms:</p>
+    <table>
+      <tr>
+        <th>Disease</th>
+        <th>Symptoms</th>
+      </tr>
+      <tr>
+        <td>Diabetes</td>
+        <td>Increased thirst, frequent urination, fatigue, blurred vision</td>
+      </tr>
+      <tr>
+        <td>Hypertension</td>
+        <td>Headache, dizziness, chest pain, shortness of breath</td>
+      </tr>
+      <tr>
+        <td>Asthma</td>
+        <td>Wheezing, coughing, chest tightness, difficulty breathing</td>
+      </tr>
+      <tr>
+        <td>COVID-19</td>
+        <td>Fever, cough, loss of taste/smell, difficulty breathing</td>
+      </tr>
+      <tr>
+        <td>Migraine</td>
+        <td>Severe headache, nausea, sensitivity to light/sound</td>
+      </tr>
+    </table>
+
+    <div class="btn-container">
+      <button onclick="nextPage()">View Images & Advice</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>CarePlus Hospital - Wellness City, India</p>
+  </footer>
+
+  <script>
+    function nextPage() {
+      window.location.href = "advice.html"; // Page 5
+    }
+  </script>
+</body>
+</html>

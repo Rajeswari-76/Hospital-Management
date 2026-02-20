@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Book Appointment - CarePlus Hospital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f8fb;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #0077b6;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    form {
+      background: white;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      width: 100%;
+      max-width: 500px;
+    }
+    form h2 {
+      text-align: center;
+      color: #0077b6;
+      margin-bottom: 1.5rem;
+    }
+    .form-group {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .form-group label {
+      margin-right: 1rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      width: 100%;
+    }
+    .btn-container {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #023e8a;
+    }
+    footer {
+      background: #03045e;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>Book an Appointment</header>
+
+  <div class="container">
+    <form id="appointmentForm">
+      <h2>Patient Details</h2>
+
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" required />
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+          <option value="">Select</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="doctor">Doctor:</label>
+        <select id="doctor" required>
+          <option value="">Select Doctor</option>
+          <option>Dr. Ramesh - Cardiologist</option>
+          <option>Dr. Priya - Neurologist</option>
+          <option>Dr. Kiran - Pediatrician</option>
+          <option>Dr. Meena - Orthopedic</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" required />
+      </div>
+
+      <div class="form-group">
+        <label for="time">Time:</label>
+        <input type="time" id="time" required />
+      </div>
+
+      <div class="form-group">
+        <label for="issue">Health Issue:</label>
+        <textarea id="issue" rows="3"></textarea>
+      </div>
+
+      <div class="btn-container">
+        <button type="submit">Confirm Appointment</button>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <p>CarePlus Hospital - Wellness City, India</p>
+  </footer>
+
+  <script>
+    document.getElementById("appointmentForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      // Get values
+      const appointment = {
+        name: document.getElementById("name").value,
+        age: document.getElementById("age").value,
+        gender: document.getElementById("gender").value,
+        doctor: document.getElementById("doctor").value,
+        date: document.getElementById("date").value,
+        time: document.getElementById("time").value,
+        issue: document.getElementById("issue").value
+      };
+
+      // Save in localStorage
+      localStorage.setItem("appointmentData", JSON.stringify(appointment));
+
+      // Redirect to confirmation page
+      window.location.href = "confirmation.html";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>CarePlus Hospital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f8fb;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #0077b6;
+      padding: 1rem;
+    }
+    header .nav {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+    header .nav li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    .hero img {
+      max-width: 700px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-bottom: 1.5rem;
+    }
+    .info {
+      max-width: 800px;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+    .info h3 {
+      color: #0077b6;
+      margin-bottom: 0.5rem;
+    }
+    .info ul, .info ol {
+      margin: 0.5rem 0 1.5rem 1.5rem;
+      line-height: 1.6;
+    }
+    .hero .btn {
+      background: #0077b6;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+    .hero .btn:hover {
+      background: #023e8a;
+    }
+    footer {
+      background: #03045e;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="appointment.html">Appointment</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Hospital Image -->
+  <section class="hero">
+    <img src="https://www.carehospitals.com/assets/images/main/care-hospitals-hitech-opd.png" alt="Hospital Building" />
+    
+    <!-- Small Info About CarePlus Hospital in List Format -->
+    <div class="info">
+      <h3>About CarePlus Hospital</h3>
+      <ul>
+        <li>One of the leading healthcare institutions in Wellness City.</li>
+        <li>Equipped with modern medical facilities and advanced technology.</li>
+        <li>Experienced team of doctors, nurses, and support staff.</li>
+        <li>Patient-friendly approach with affordable healthcare services.</li>
+      </ul>
+
+      <h3>Our Specializations</h3>
+      <ol>
+        <li>Cardiology</li>
+        <li>Neurology</li>
+        <li>Pediatrics</li>
+        <li>Orthopedics</li>
+        <li>Emergency & Trauma Care</li>
+      </ol>
+
+      <h3>Our Mission</h3>
+      <ul>
+        <li>To provide compassionate care with excellence.</li>
+        <li>To ensure accessible and affordable healthcare.</li>
+        <li>To promote wellness and preventive health awareness.</li>
+      </ul>
+    </div>
+
+    <!-- Appointment Button -->
+    <a class="btn" href="appointment.html">Book an Appointment</a>
+  </section>
+
+  <!-- Footer with Hospital Info -->
+  <footer>
+    <h2>CarePlus Hospital</h2>
+    <p>123 Health Street, Wellness City, India</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Appointment Confirmation - CarePlus Hospital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f8fb;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #0077b6;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+    .card h2 {
+      color: #0077b6;
+      margin-bottom: 1rem;
+    }
+    .details {
+      text-align: left;
+      margin-top: 1.5rem;
+    }
+    .details p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      color: #333;
+    }
+    .btn-container {
+      margin-top: 2rem;
+    }
+    button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #023e8a;
+    }
+    footer {
+      background: #03045e;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>Appointment Confirmation</header>
+
+  <div class="container">
+    <div class="card">
+      <h2>Your Appointment is Confirmed 🎉</h2>
+      <p>Here are your appointment details:</p>
+      <div class="details" id="appointmentDetails"></div>
+
+      <div class="btn-container">
+        <button onclick="goToNext()">View Diseases & Symptoms</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>CarePlus Hospital - Wellness City, India</p>
+  </footer>
+
+  <script>
+    // Load stored data
+    const data = JSON.parse(localStorage.getItem("appointmentData"));
+
+    if (data) {
+      document.getElementById("appointmentDetails").innerHTML = `
+        <p><strong>Name:</strong> ${data.name}</p>
+        <p><strong>Age:</strong> ${data.age}</p>
+        <p><strong>Gender:</strong> ${data.gender}</p>
+        <p><strong>Doctor:</strong> ${data.doctor}</p>
+        <p><strong>Date:</strong> ${data.date}</p>
+        <p><strong>Time:</strong> ${data.time}</p>
+        <p><strong>Health Issue:</strong> ${data.issue}</p>
+      `;
+    } else {
+      document.getElementById("appointmentDetails").innerHTML = "<p>No appointment data found.</p>";
+    }
+
+    function goToNext() {
+      window.location.href = "symptoms.html"; // Page 4
+    }
+  </script>
+</body>
+</html>
